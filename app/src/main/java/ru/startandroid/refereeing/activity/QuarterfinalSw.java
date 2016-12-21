@@ -3,6 +3,8 @@ package ru.startandroid.refereeing.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.TextView;
 
 import ru.startandroid.refereeing.R;
@@ -14,12 +16,33 @@ import ru.startandroid.refereeing.R;
 public class QuarterfinalSw extends AppCompatActivity {
     TextView judgeName;
     final String JUDGENAME = "judgeName";
+    String[] couples1 = {"1", "2","3" ,"4" ,"5" ,"6" ,"7", "8", "9", "10", "11", "12"};
+    String[] couples2 = {"13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"};
+    GridView gl_event1, gl_event2;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quarterfinalsw);
+
         judgeName = (TextView)findViewById(R.id.judgeName);
         String text1 = getIntent().getExtras().getString(JUDGENAME);
         judgeName.setText(text1);
+
+        gl_event1 = (GridView)findViewById(R.id.gl_event1);
+        gl_event2 = (GridView)findViewById(R.id.gl_event2);
+
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, R.layout.couple, R.id.tvText, couples1);
+        gl_event1.setAdapter(adapter1);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.couple, R.id.tvText, couples2);
+        gl_event2.setAdapter(adapter2);
+        adjustGridView(gl_event1);
+        adjustGridView(gl_event2);
+    }
+    private void adjustGridView(GridView gridView) {
+        gridView.setNumColumns(GridView.AUTO_FIT);
+        gridView.setColumnWidth(80);
+        gridView.setVerticalSpacing(5);
+        gridView.setHorizontalSpacing(5);
+
     }
 }
