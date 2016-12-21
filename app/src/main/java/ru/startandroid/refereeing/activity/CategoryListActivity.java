@@ -1,6 +1,7 @@
 package ru.startandroid.refereeing.activity;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Adapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -16,7 +17,7 @@ import ru.startandroid.refereeing.R;
  * Created by Slav on 20.12.2016.
  */
 
-public class CategoryListActivity extends MainActivity {
+public class CategoryListActivity extends AppCompatActivity {
     final String ATTRIBUTE_NAME = "names";
     final String ATTRIBUTE_COUNT = "count";
 

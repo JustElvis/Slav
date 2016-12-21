@@ -19,8 +19,8 @@
         android:id="@+id/btnAdjudicate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onclick"
         android:text="@string/button_adjudicate"
+        android:onClick="onclick"
         android:layout_below="@+id/welcome"
         android:layout_marginTop="10dp"
         android:layout_marginRight="5dp"
@@ -34,5 +34,6 @@
         android:textSize="20sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        />
 </RelativeLayout>

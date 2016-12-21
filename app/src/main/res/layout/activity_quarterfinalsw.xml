@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvCat"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:text="Юв1 1/4 фіналу 24 пари"
+        />
+    <TextView
+        android:id="@+id/judge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCat"
+        android:layout_margin="5dp"
+        android:text="Суддя : "
+        />
+    <TextView
+        android:id="@+id/judgeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCat"
+        android:layout_toRightOf="@+id/judge"
+        android:layout_margin="5dp"
+        />
+    <TextView
+        android:id="@+id/tvSw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/judgeName"
+        android:text="Повільний вальс"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/tvEvent1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Захід 1"
+        android:layout_below="@+id/tvSw"
+        android:textSize="15sp"
+        android:layout_margin="5dp"
+        />
+    <GridView
+        android:id="@+id/gl_event1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="6"
+        android:layout_below="@+id/tvEvent1"
+        >
+    </GridView>
+    <TextView
+        android:id="@+id/tvEvent2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Захід 2"
+        android:layout_below="@+id/gl_event1"
+        android:textSize="15sp"
+        android:layout_margin="5dp"
+        />
+    <GridView
+        android:id="@+id/gl_event2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="6"
+        android:layout_below="@+id/tvEvent2"
+        >
+    </GridView>
+</RelativeLayout>
