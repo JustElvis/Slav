@@ -10,7 +10,11 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import ru.startandroid.refereeing.R;
+import ru.startandroid.refereeing.couple.Couple;
+import ru.startandroid.refereeing.couple.CouplesCreate;
 
 /**
  * Created by Slav on 21.12.2016.
