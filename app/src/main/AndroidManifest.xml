@@ -19,6 +19,7 @@
         <activity android:name=".activity.JudgesActivity"></activity>
         <activity android:name=".activity.QuarterfinalSw"></activity>
         <activity android:name=".activity.QuarterfinalTg"></activity>
+        <activity android:name=".activity.QuarterfinalQw"></activity>
     </application>
 
 </manifest>

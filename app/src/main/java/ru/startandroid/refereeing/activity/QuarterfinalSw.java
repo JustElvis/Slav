@@ -46,7 +46,7 @@ public class QuarterfinalSw extends AppCompatActivity {
         adjustGridView(gl_event2);
 
         btnEndDance = (Button)findViewById(R.id.btnEndDance);
-        btnEndDance.setText("Завершити танець");
+        btnEndDance.setText("Наступний танець");
         final Intent intent = new Intent(this, QuarterfinalTg.class);
         btnEndDance.setOnClickListener(new View.OnClickListener() {
             @Override
