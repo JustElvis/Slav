@@ -3,6 +3,7 @@ package ru.startandroid.refereeing.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
@@ -55,5 +56,8 @@ public class QuarterfinalQw extends AppCompatActivity {
         gridView.setColumnWidth(80);
         gridView.setVerticalSpacing(5);
         gridView.setHorizontalSpacing(5);
+    }
+    public void onclick (View view){
+        view.setBackgroundResource(R.drawable.rectdark);
     }
 }

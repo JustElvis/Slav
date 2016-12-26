@@ -64,4 +64,7 @@ public class QuarterfinalTg extends AppCompatActivity {
         gridView.setVerticalSpacing(5);
         gridView.setHorizontalSpacing(5);
     }
+    public void onclick (View view){
+        view.setBackgroundResource(R.drawable.rectdark);
+    }
 }
