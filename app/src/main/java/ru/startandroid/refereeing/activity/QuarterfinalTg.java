@@ -1,10 +1,8 @@
 package ru.startandroid.refereeing.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
@@ -13,27 +11,32 @@ import android.widget.TextView;
 import ru.startandroid.refereeing.R;
 
 /**
- * Created by Slav on 21.12.2016.
+ * Created by Slav on 26.12.2016.
  */
 
-public class QuarterfinalSw extends AppCompatActivity {
-    Button btnEndDance;
-    TextView judgeName, tvDanceName;
+public class QuarterfinalTg extends AppCompatActivity {
+    private TextView tvDanceName;
+    private TextView judgeName;
     final String JUDGENAME = "judgeName";
+    private Button btnEndDance;
+    private GridView gl_event1;
+    private GridView gl_event2;
     String[] couples1 = {"1", "2","3" ,"4" ,"5" ,"6" ,"7", "8", "9", "10", "11", "12"};
     String[] couples2 = {"13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"};
-    GridView gl_event1, gl_event2;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quarterfinaldance);
 
         tvDanceName = (TextView)findViewById(R.id.tvDanceName);
-        tvDanceName.setText("Повільний вальс");
+        tvDanceName.setText("Танго");
 
         judgeName = (TextView)findViewById(R.id.judgeName);
-        final String text1 = getIntent().getExtras().getString(JUDGENAME);
-        judgeName.setText(text1);
+        judgeName.setText(getIntent().getExtras().getString(JUDGENAME));
+
+        btnEndDance = (Button)findViewById(R.id.btnEndDance);
+        btnEndDance.setText("Наступний танець");
 
         gl_event1 = (GridView)findViewById(R.id.gl_event1);
         gl_event2 = (GridView)findViewById(R.id.gl_event2);
@@ -44,17 +47,6 @@ public class QuarterfinalSw extends AppCompatActivity {
         gl_event2.setAdapter(adapter2);
         adjustGridView(gl_event1);
         adjustGridView(gl_event2);
-
-        btnEndDance = (Button)findViewById(R.id.btnEndDance);
-        btnEndDance.setText("Завершити танець");
-        final Intent intent = new Intent(this, QuarterfinalTg.class);
-        btnEndDance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent.putExtra(JUDGENAME, text1);
-                startActivity(intent);
-            }
-        });
     }
     private void adjustGridView(GridView gridView) {
         gridView.setNumColumns(6);
