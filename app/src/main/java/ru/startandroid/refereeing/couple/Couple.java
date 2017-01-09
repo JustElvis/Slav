@@ -5,16 +5,14 @@ package ru.startandroid.refereeing.couple;
  */
 
 public class Couple {
-    private int number;
+    private String number;
     private int place;
-    public Couple (int number, int place){
+    public Couple (String number, int place){
         this.number = number;
         this.place = place;
     }
-    public int getNumber(){
+    public String getNumber(){
         return number;
     }
-    public int getPlace(){
-        return place;
-    }
+    public int getPlace(){ return place; }
 }
